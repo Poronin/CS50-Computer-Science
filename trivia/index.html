@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>Who was Maradona?</h3>
+                <button id="answersFirstQuestion">a tennis player</button>
+                <button id="answersFirstQuestion">a football player</button>
+                <button id="answersFirstQuestion">a rugby player</button>
+                <button id="answersFirstQuestion">a basketball player</button>
+                <p id="q1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>What fruit did Eva eat in the garden of eden?</h3>
+                <input type="text">
+                <button id="answersSecondQuestion">Submit</button>
+                <p id="q2"></p>
+            </div>
+        </div>
+        <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const answers = document.querySelectorAll('#answersFirstQuestion');
+            const outcome = document.querySelector('#q1');
+
+            answers.forEach( (answer) => {
+                answer.addEventListener('click', () => {
+
+                    if (answer.textContent === "a football player")
+                    {
+                        answer.style.background = 'green';
+                        outcome.innerHTML = 'Correct!'
+                    }
+                    else
+                    {
+                        answer.style.background = 'red';
+                        outcome.innerHTML = 'Incorrect!';
+                    }
+                });
+            });
+
+
+            const outcome2 = document.querySelector('#q2');
+
+            document.querySelector('#answersSecondQuestion').addEventListener('click', () => {
+                let textInput = document.querySelector('input');
+                console.log(textInput.value);
+                if (textInput.value.toLowerCase() === "apple")
+                {
+                    textInput.style.background = 'green';
+                    outcome2.innerHTML = 'Correct!'
+                }
+                else
+                {
+                    textInput.style.background = 'red';
+                    outcome2.innerHTML = 'Incorrect!';
+                }
+            });
+        })
+</script>
+
+    </body>
+</html>

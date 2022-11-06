@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: This algorithm is faster when data is sorted since its Omega is equal to n. The rest of the algorithms have the same upper bound and lower bound Theta.
+
+sort2 uses: merge sort
+
+How do you know?: it is the faster algorithm when sorting higher volumes of data (Big O: log n)
+
+sort3 uses: selection sort
+
+How do you know?: This algorithm responds the same way for the same volume of data in all three scenarios: sorted, reversed and random.
