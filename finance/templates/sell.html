@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+
+<form action="/sell" method="post">
+
+    <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-md-auto">
+            <select class="form-select mx-auto w-auto" name="symbol" data-ddg-inputtype="unknown">
+              <option disabled="" selected="">Symbol</option>
+              {% for row in rows %}
+                  <option value="{{ row['symbol'] }}">{{ row['symbol'] }}</option>
+              {% endfor %}
+          </select>
+
+          </div>
+          <div class="col-md-auto">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="shares" placeholder="Shares" type="text">
+          </div>
+          <div class="col-md-auto">
+            <button class="btn btn-primary" type="submit">Sell</button>
+          </div>
+        </div>
+    </div>
+
+</form>
+{% endblock %}

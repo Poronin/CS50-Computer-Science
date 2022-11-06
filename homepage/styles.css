@@ -1,0 +1,24 @@
+a {
+    text-decoration: none;
+}
+
+#black,
+nav {
+    background-color: #262626;
+}
+
+p {
+    color: black;
+    padding: auto;
+}
+
+#popup {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+body {
+    margin-right: auto;
+    margin-left: auto;
+}

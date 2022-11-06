@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <form action="/register" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+        </div>
+
+            {% if password_validation %}
+
+                <div class="mb-3">
+                    <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+                </div>
+                <div class="mb-3">
+                    <input class="form-control mx-auto w-auto" id="password" name="confirmation" placeholder="Password" type="password">
+                </div>
+
+            {% else %}
+
+                <div class="mb-3">
+                    <input class="form-control mx-auto w-auto form-control is-invalid" id="validationServer03" name="password" placeholder="Password" type="password" aria-describedby="validationServer03Feedback" required>
+                </div>
+                <div class="mb-3">
+                    <input class="form-control mx-auto w-auto form-control is-invalid" id="validationServer03" name="confirmation" placeholder="Password" type="password" aria-describedby="validationServer03Feedback" required>
+                    <div id="invalidCheck3Feedback" class="invalid-feedback">
+                        Password must contain 8 characters and at least one number, one letter.
+                    </div>
+                </div>
+            {% endif %}
+
+        <button class="btn btn-primary" type="submit">Register</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href="styles.css" rel="stylesheet">
+    <title>My CS50 Retro RGB Webpage</title>
+</head>
+
+<body>
+    <header>
+        <div id="black">
+            <nav class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-2 m-1 bg-primary border border-dark text-center"><a href="index.html"
+                            class="display-5 text-white">Me</a></div>
+                    <div class="col-lg-2 m-1 bg-white border border-dark text-center"><a href="studies.html"
+                            class="display-5 text-dark">Studies</a></div>
+                    <div class="col-lg-2 m-1 bg-success text-white border border-dark text-center"><a href="carrer.html"
+                            class="display-5 text-white">Carrer</a></div>
+                    <div class="col-lg-2 m-1 bg-danger text-white border border-dark text-center"><a href="hobbies.html"
+                            class="display-5 text-white">Hobbies</a></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="my-5">
+        <div class="container-sm">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-5">
+                    <img src="https://picsum.photos/id/227/600/400" alt="" class="img-fluid rounded">
+                </div>
+                <div class="col-lg-7 bg-light px-4 py-5 my-4" id="mypopup">
+                    <h1 class="py-3 px-3">Lorem</h1>
+                    <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit praesentium nulla, sit
+                        voluptate iste magni voluptatem harum vitae architecto assumenda ptate iste magni voluptatem
+                        harum vitae architecto assumenda ptate iste magni voluptatem harum vitae architecto assumenda,
+                        vulputate lorem eget, finibus mauris. Aliquam vel.</p>
+                    <button type="button" class="btn btn-lg btn-warning mt-2 mx-2" onclick="myFunction()">Go!</button>
+                </div>
+            </div>
+            <div class="row" id="popup">
+                <div class="col">
+                    <div class="alert alert-warning d-flex align-items-center" role="alert">
+                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:">
+                            <use xlink:href="#exclamation-triangle-fill" />
+                        </svg>
+                        <div>Warning!! Are you ready to go??</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-4">
+                <div class="col bg-light px-5 py-5">
+                    <h2 class="display-5 mt-4">Lorem</h2>
+                    <p class="mt2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi suscipit obcaecati
+                        iusto at tempora ipsa animi officiis, vero eius velit, veniam quae dolorem deserunt accusantium
+                        quasi sunt debitis culpa maiores sed blanditiis soluta tenetur molestias impedit explicabo? Aut
+                        quam delectus minus enim iste vitae, expedita vel beatae unde ut dignissimos rem nulla repellat
+                        praesentium, totam odit quas sequi quos magni impedit ab placeat illo? Aut, fugit perspiciatis!
+                        Blanditiis asperiores perspiciatis vitae sapiente! Non saepe optio veniam perferendis sint
+                        commodi animi, quaerat, perspiciatis dicta error autem. Quam in, quis suscipit necessitatibus
+                        quasi praesentium blanditiis dolores corrupti unde, recusandae fugit aperiam asperiores?</p>
+                    <p class="mt2 mt-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, ipsa
+                        tempora iusto autem quo distinctio inventore illum ratione voluptatem corrupti possimus magni
+                        sequi praesentium reprehenderit odio eum tenetur totam ab? ipsum dolor sit amet consectetur
+                        adipisicing elit. Nisi suscipit obcaecati iusto at tempora ipsa animi officiis, vero eius velit,
+                        veniam quae dolorem deserunt accusantium quasi sunt debitis culpa maiores sed blanditiis soluta
+                        tenetur molestias impedit explicabo? Aut quam delectus minus enim iste vitae, expedita vel
+                        beatae unde ut dignissimos rem nulla repellat praesentium, totam odit quas sequi quos magni
+                        impedit ab placeat illo? Aut, fugit perspiciatis! Blanditiis asperiores perspiciatis vitae
+                        sapiente! Non saepe optio veniam perferendis sint commodi animi, quaerat, perspiciatis dicta
+                        error autem. Quam in, quis suscipit necessitatibus quasi praesentium blanditiis dolores corrupti
+                        unde, recusandae fugit aperiam asperiores?</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mt-5">
+                    <div class="card">
+                        <div class="card-body bg-secondary text-white text-center">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem adipisci labore ut,
+                            voluptate harum eius eos assumenda minus molestiae beatae..
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        // When the user clicks on div, open the popup
+        function myFunction() {
+            var popup = document.querySelector("#popup");
+            popup.style.visibility = 'visible';
+            popup.style.width = 'auto';
+            popup.style.height = 'auto';
+        }
+    </script>
+</body>
+
+</html>
